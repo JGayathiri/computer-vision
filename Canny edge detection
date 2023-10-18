@@ -1,0 +1,13 @@
+import cv2
+
+# Load the image
+image = cv2.imread('your_image.jpg', 0)  # Load the image in grayscale
+
+# Apply Canny edge detection
+edges = cv2.Canny(image, threshold1=100, threshold2=200)
+
+# Display the original and edges image
+cv2.imshow('Original Image', image)
+cv2.imshow('Canny Edges', edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
